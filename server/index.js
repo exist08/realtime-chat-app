@@ -60,7 +60,7 @@ io.on("connection", (socket) => {
       username: data.username,
       __createdtime__: data.__createdtime__,
     });
-    axios.post("http://localhost:5000/messages", data)
+    axios.post("https://realtime-chat-app-v1-nud1.onrender.com/messages", data)
       .then((response) => {
         console.log("Response from server:", response.data);
       })

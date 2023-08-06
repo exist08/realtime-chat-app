@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import io from "socket.io-client";
 import Chat from "./pages/chat";
 
-const socket = io.connect("http://localhost:5000")
+const socket = io.connect("https://realtime-chat-app-v1-nud1.onrender.com/")
 
 export const AppContext = createContext();
 

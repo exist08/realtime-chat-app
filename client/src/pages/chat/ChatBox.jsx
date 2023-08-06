@@ -11,7 +11,7 @@ const ChatBox = () => {
   // Function to fetch the last 50 messages from the backend
   const fetchLast50Messages = () => {
     axios
-      .get(`http://localhost:5000/messages/${room}`)
+      .get(`https://realtime-chat-app-v1-nud1.onrender.com/messages/${room}`)
       .then((response) => {
         setAllMessages(response.data);
         console.log(response.data)
