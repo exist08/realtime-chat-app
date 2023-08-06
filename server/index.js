@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 const io = new Server(server, {
   cors: {
-    origin: "http://127.0.0.1:5173",
+    origin: "https://realtime-chat-brizzler.netlify.app",
     methods: ["GET", "POST"],
   },
 });
@@ -77,7 +77,7 @@ app.get("/", (req, res) => {
 app.route("/messages").post(routeController.addData);
 app.route("/messages/:room").get(routeController.getData)
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}`);
+  console.log(`Server started on port ${PORT}`);
 });
