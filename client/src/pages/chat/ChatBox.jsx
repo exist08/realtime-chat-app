@@ -6,7 +6,48 @@ import axios from "axios"
 
 const ChatBox = () => {
   const { socket, room, username } = useContext(AppContext);
-  const [allMessages, setAllMessages] = useState([]);
+  const [allMessages, setAllMessages] = useState([
+    {
+      message: "Hello There!",
+      username: "John",
+      __createdtime__: 1691379799980,
+    },
+    {
+      message: "Hello to you too",
+      username: "Smith",
+      __createdtime__: 1691379799980,
+    },
+    {
+      message: "Wassup bro how you doing",
+      username: "Jhon",
+      __createdtime__: 1691379799980,
+    },
+    {
+      message: "I'm doing fine, what about you",
+      username: "Smith",
+      __createdtime__: 1691379799980,
+    },
+    {
+      message: "I'm doing fine too",
+      username: "Jhon",
+      __createdtime__: 1691379799980,
+    },
+    {
+      message: "Bro lets go out for some trip",
+      username: "Smith",
+      __createdtime__: 1691379799980,
+    },
+    {
+      message: "Yeah I was thinking the same glad you asked",
+      username: "Jhon",
+      __createdtime__: 1691379799980,
+    },
+    {
+      message: "Yeah, I was planning for it for the last 2 weeks",
+      username: "Smith",
+      __createdtime__: 1691379799980,
+    },
+  ]);
 
   // Function to fetch the last 50 messages from the backend
   const fetchLast50Messages = () => {

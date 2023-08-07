@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import styles from './chat.module.css'
 import { AppContext } from '../../App'
 
-const Sidebar = () => {
+const Sidebar = ({ isBackView }) => {
   const { room, socket } = useContext(AppContext)
   const [chatRoomUsers, setChatRoomUsers] = useState([])
   useEffect(()=>{
@@ -17,7 +17,7 @@ const Sidebar = () => {
   },[socket])
 
   return (
-    <div className={styles.Sidebar}>
+    <div className={styles.Sidebar} style={{ transform: `rotateY(${isBackView ? '0deg' : '180deg'})` }}>
         <h1>{room}</h1>
         <div>
             <h2>Users:</h2>

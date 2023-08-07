@@ -6,6 +6,16 @@
   max-height: 400px;
   overflow: auto;
 }
+@media (width<= 768px) {
+  .chat-box {
+    outline: 2px solid rgb(18, 87, 18);
+    padding: 1em;
+    width: 100%;
+    border-radius: 20px 20px 0;
+    height: 90%;
+    max-height: 90%;
+  }
+}
 .chat-msg{
   display: flex;
   flex-direction: column;
